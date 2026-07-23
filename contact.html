@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Inspur MEA Partner | Request a Consultation</title>
+<meta name="description" content="Request a consultation on Inspur servers, storage, AI infrastructure, cloud and ERP for Africa &amp; the Middle East. Real answers on availability, pricing and implementation within one business day.">
+<link rel="canonical" href="https://inspurmea.com/contact">
+<meta name="theme-color" content="#081527">
+<meta property="og:site_name" content="Inspur MEA Partner">
+<meta property="og:title" content="Contact — Inspur MEA Partner">
+<meta property="og:description" content="Talk to the region's direct line to Inspur. Response within one business day.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://inspurmea.com/contact">
+<meta property="og:image" content="https://inspurmea.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://inspurmea.com/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231B5BD7'/%3E%3Cstop offset='1' stop-color='%2335C4E8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-weight='800' font-size='26' fill='white' text-anchor='middle'%3EIN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wdth,wght@62..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <a href="/" style="display:flex;align-items:center;gap:12px"><div class="brand-mark">IN</div>
+      <div><b>Inspur MEA Partner</b><span>Official Partner · Africa &amp; Middle East</span></div></a>
+    </div>
+    <nav class="nav-links">
+      <a href="/products">Products</a>
+      <a href="/solutions">Solutions</a>
+      <a href="/about">About</a>
+      <a href="/#resources">Resources</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang"><a class="on" href="#">EN</a><a href="#">عربي</a><a href="#">FR</a></div>
+      <a class="btn btn-gold" href="/contact">Request a Consultation</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <span class="crumb"><a href="/">Home</a> / Contact</span>
+    <h1>Talk to the region's <span class="gw">direct line to Inspur</span></h1>
+    <p>Tell us what you're building. You'll get a response within one business day — with real answers on availability, pricing and implementation, not a sales script.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap contact-grid">
+    <div class="contact-info rv">
+      <div class="row"><b>Email</b><a href="mailto:hi@inspurmea.com">hi@inspurmea.com</a></div>
+      <div class="row"><b>Response time</b><p>Within one business day, in English, Arabic or French.</p></div>
+      <div class="row"><b>What to include</b><p>Your sector, the workload you're planning (or the RFP you're answering), target sites and rough timeline. Half-formed is fine — scoping is what the first call is for.</p></div>
+      <div class="row"><b>Coverage</b><p>Africa &amp; the Middle East — coordinated from Cairo, Riyadh and Dubai.</p></div>
+    </div>
+    <form class="form-light rv" action="/api/lead" method="POST">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="resource" id="resource-field" value="">
+      <input type="text" name="name" placeholder="Full name" aria-label="Full name" required>
+      <input type="email" name="email" placeholder="Business email" aria-label="Business email" required>
+      <input type="text" name="company" placeholder="Company" aria-label="Company">
+      <select name="country" aria-label="Country"><option value="">Country</option><option>Egypt</option><option>Saudi Arabia</option><option>UAE</option><option>Morocco</option><option>Nigeria</option><option>Kenya</option><option>Other</option></select>
+      <select name="need" aria-label="What do you need"><option value="">What do you need?</option><option>AI Infrastructure / GPU servers</option><option>Servers &amp; Storage</option><option>Cloud &amp; ERP</option><option>Smart City / Industrial</option><option>Not sure yet — advise me</option></select>
+      <button class="btn btn-gold" type="submit">Request a Consultation</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><b style="color:#fff">Inspur MEA Partner</b> · Official Strategic Partner — Africa &amp; Middle East</div>
+    <div class="foot-links mono">
+      <a href="/products">Products</a><a href="/solutions">Solutions</a><a href="/about">About</a><a href="/contact">Contact</a>
+      <a href="mailto:hi@inspurmea.com" style="color:#35C4E8">hi@inspurmea.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
