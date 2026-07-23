@@ -412,13 +412,13 @@ footer{background:var(--deep);color:rgba(246,248,250,.6);padding:44px 0;font-siz
         <span class="k">Free Guide · PDF</span>
         <h3>MENA Data Center Buyer's Guide 2026</h3>
         <p>Sizing, TCO benchmarks, vendor comparison and procurement pitfalls — written for regional CIOs and infrastructure heads.</p>
-        <a class="btn btn-wave" href="#consult">Download the guide</a>
+        <a class="btn btn-wave" href="#consult" data-resource="MENA Data Center Buyer's Guide 2026">Request the guide</a>
       </div>
       <div class="res rv">
         <span class="k">Free Assessment · Checklist</span>
         <h3>AI Infrastructure Readiness Checklist</h3>
         <p>A 20-point self-assessment: power, cooling, network, storage and skills — know exactly where you stand before you buy a single GPU.</p>
-        <a class="btn btn-wave" href="#consult">Get the checklist</a>
+        <a class="btn btn-wave" href="#consult" data-resource="AI Infrastructure Readiness Checklist">Request the checklist</a>
       </div>
     </div>
   </div>
@@ -431,14 +431,20 @@ footer{background:var(--deep);color:rgba(246,248,250,.6);padding:44px 0;font-siz
         <h2>Talk to the region's direct line to Inspur</h2>
         <p>Tell us what you're building. You'll get a response within one business day — with real answers on availability, pricing and implementation, not a sales script.</p>
       </div>
-      <div class="form">
-        <input type="text" placeholder="Full name" aria-label="Full name">
-        <input type="email" placeholder="Business email" aria-label="Business email">
-        <input type="text" placeholder="Company" aria-label="Company">
-        <select aria-label="Country"><option>Country</option><option>Egypt</option><option>Saudi Arabia</option><option>UAE</option><option>Morocco</option><option>Nigeria</option><option>Kenya</option><option>Other</option></select>
-        <select aria-label="What do you need"><option>What do you need?</option><option>AI Infrastructure / GPU servers</option><option>Servers &amp; Storage</option><option>Cloud &amp; ERP</option><option>Smart City / Industrial</option><option>Not sure yet — advise me</option></select>
-        <button class="btn btn-gold" type="button">Request a Consultation</button>
-      </div>
+      <form class="form" action="https://formsubmit.co/hi@inspurmea.com" method="POST">
+        <input type="hidden" name="_subject" value="New consultation request — inspurmea.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://inspurmea.com/thanks">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="resource" id="resource-field" value="">
+        <input type="text" name="name" placeholder="Full name" aria-label="Full name" required>
+        <input type="email" name="email" placeholder="Business email" aria-label="Business email" required>
+        <input type="text" name="company" placeholder="Company" aria-label="Company">
+        <select name="country" aria-label="Country"><option value="">Country</option><option>Egypt</option><option>Saudi Arabia</option><option>UAE</option><option>Morocco</option><option>Nigeria</option><option>Kenya</option><option>Other</option></select>
+        <select name="need" aria-label="What do you need"><option value="">What do you need?</option><option>AI Infrastructure / GPU servers</option><option>Servers &amp; Storage</option><option>Cloud &amp; ERP</option><option>Smart City / Industrial</option><option>Not sure yet — advise me</option></select>
+        <button class="btn btn-gold" type="submit">Request a Consultation</button>
+      </form>
     </div>
   </div>
 </section>
@@ -446,7 +452,7 @@ footer{background:var(--deep);color:rgba(246,248,250,.6);padding:44px 0;font-siz
 <footer>
   <div class="wrap foot">
     <div><b style="color:#fff">Inspur MEA Partner</b> · Official Strategic Partner — Africa &amp; Middle East</div>
-    <div class="mono">EN · العربية · FR &nbsp;|&nbsp; inspurmea.com</div>
+    <div class="mono"><a href="mailto:hi@inspurmea.com" style="color:#35C4E8">hi@inspurmea.com</a> &nbsp;|&nbsp; EN · العربية · FR</div>
   </div>
 </footer>
 
@@ -464,6 +470,13 @@ const so=new IntersectionObserver(es=>es.forEach(e=>{
   el.textContent='0'+suf;requestAnimationFrame(step);
 }),{threshold:.6});
 document.querySelectorAll('.stat b').forEach(el=>so.observe(el));
+// lead-magnet buttons: tag the request + focus the form
+document.querySelectorAll('[data-resource]').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('resource-field').value=a.dataset.resource;
+  const subj=document.querySelector('input[name="_subject"]');
+  subj.value='Resource request: '+a.dataset.resource+' — inspurmea.com';
+  setTimeout(()=>document.querySelector('.form input[name="name"]').focus({preventScroll:true}),600);
+}));
 </script>
 </body>
 </html>
