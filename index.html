@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inspur MEA — Strategic Partner for Africa &amp; the Middle East</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wdth,wght@62..125,500..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1F3A;
+  --deep:#081527;
+  --wave:#1B5BD7;
+  --pulse:#35C4E8;
+  --gold:#C99A3C;
+  --porcelain:#F6F8FA;
+  --line:rgba(11,31,58,.12);
+  --line-light:rgba(246,248,250,.14);
+  --display:'Archivo',sans-serif;
+  --body:'IBM Plex Sans','IBM Plex Sans Arabic',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--porcelain);line-height:1.6;font-size:16px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+/* ---------- eyebrow: bilingual device ---------- */
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:12px;color:var(--wave)}
+.eyebrow .ar{font-family:'IBM Plex Sans Arabic';font-weight:700;letter-spacing:0;text-transform:none;font-size:13px;color:var(--gold)}
+.eyebrow::after{content:"";flex:0 0 48px;height:1px;background:currentColor;opacity:.4}
+.dark .eyebrow{color:var(--pulse)}
+
+/* ---------- top bar ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(8,21,39,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-light)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;color:#fff}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:34px;height:34px;border-radius:6px;background:linear-gradient(135deg,var(--wave),var(--pulse));display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:15px;color:#fff}
+.brand b{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:.01em}
+.brand span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.nav-links{display:flex;gap:28px;font-size:14px;font-weight:500}
+.nav-links a{opacity:.85;transition:opacity .2s}
+.nav-links a:hover,.nav-links a:focus-visible{opacity:1}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang{font-family:var(--mono);font-size:12px;display:flex;gap:2px;border:1px solid var(--line-light);border-radius:6px;overflow:hidden}
+.lang a{padding:5px 10px;opacity:.6}
+.lang a.on{background:var(--wave);opacity:1}
+.btn{display:inline-block;font-weight:600;font-size:14px;padding:11px 22px;border-radius:8px;transition:transform .15s,box-shadow .15s;border:0;cursor:pointer}
+.btn:focus-visible{outline:3px solid var(--pulse);outline-offset:2px}
+.btn-gold{background:var(--gold);color:var(--deep)}
+.btn-gold:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,154,60,.35)}
+.btn-wave{background:var(--wave);color:#fff}
+.btn-wave:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(27,91,215,.4)}
+.btn-ghost{border:1px solid var(--line-light);color:#fff}
+.btn-ghost:hover{border-color:var(--pulse);color:var(--pulse)}
+@media(max-width:900px){.nav-links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{background:radial-gradient(1200px 600px at 75% 20%,#12305c 0%,var(--deep) 60%);color:#fff;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line-light) 1px,transparent 1px),linear-gradient(90deg,var(--line-light) 1px,transparent 1px);background-size:56px 56px;opacity:.25;mask-image:radial-gradient(800px 500px at 70% 40%,#000 30%,transparent 75%)}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:96px 0 110px}
+.hero h1{font-family:var(--display);font-variation-settings:'wdth' 118;font-weight:850;font-size:clamp(38px,4.6vw,60px);line-height:1.04;letter-spacing:-.01em}
+.hero h1 .gw{color:var(--gold)}
+.hero .badge{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line-light);border-radius:100px;padding:8px 16px;margin-bottom:26px;color:var(--pulse)}
+.hero .badge i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+.hero p.lede{margin:22px 0 34px;font-size:18px;max-width:520px;color:rgba(246,248,250,.82)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-name{margin-top:38px;display:flex;align-items:center;gap:14px}
+.hero-name .avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8a6320);display:grid;place-items:center;font-family:var(--display);font-weight:900;color:var(--deep)}
+.hero-name .t{font-size:13.5px;color:rgba(246,248,250,.75)}
+.hero-name .t b{display:block;color:#fff;font-size:15px}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding:64px 0 80px}}
+
+/* gateway map (signature) */
+.gateway{position:relative;height:460px}
+.gateway svg{width:100%;height:100%;overflow:visible}
+.arc{fill:none;stroke:url(#arcGrad);stroke-width:1.4;opacity:.55}
+.arc-pulse{fill:none;stroke:var(--pulse);stroke-width:2;stroke-linecap:round;stroke-dasharray:26 640;animation:flow 4.5s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-666}}
+.hub circle.core{fill:var(--gold)}
+.hub circle.ring{fill:none;stroke:var(--gold);opacity:.5;animation:ring 3s ease-out infinite}
+@keyframes ring{0%{r:5;opacity:.6}100%{r:20;opacity:0}}
+.hub text{font-family:var(--mono);font-size:11px;fill:rgba(246,248,250,.85);letter-spacing:.08em}
+.origin text{fill:var(--pulse)}
+@media (prefers-reduced-motion:reduce){.arc-pulse,.hub circle.ring{animation:none}.arc-pulse{stroke-dasharray:none;opacity:.5}}
+@media(max-width:900px){.gateway{height:340px}}
+
+/* ---------- stat strip ---------- */
+.strip{background:var(--ink);color:#fff;border-top:1px solid var(--line-light)}
+.strip-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-light)}
+.stat{background:var(--ink);padding:26px 28px}
+.stat b{font-family:var(--display);font-weight:850;font-size:30px;display:block;color:var(--pulse)}
+.stat span{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(246,248,250,.65)}
+@media(max-width:900px){.strip-inner{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head h2{font-family:var(--display);font-variation-settings:'wdth' 112;font-weight:800;font-size:clamp(28px,3.4vw,42px);line-height:1.1;margin:16px 0 14px}
+.sec-head p{color:rgba(11,31,58,.72);font-size:17px}
+.dark .sec-head p{color:rgba(246,248,250,.72)}
+
+/* industries */
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 28px;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,31,58,.1);border-color:var(--wave)}
+.card .ic{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
+.card h3{font-family:var(--display);font-weight:750;font-size:20px;margin-bottom:10px}
+.card p{font-size:14.5px;color:rgba(11,31,58,.7);margin-bottom:16px}
+.card .go{font-size:13.5px;font-weight:600;color:var(--wave)}
+@media(max-width:900px){.ind-grid{grid-template-columns:1fr}}
+
+/* AI infra — dark rack section */
+.rack{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.rack::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 78px,rgba(53,196,232,.06) 78px 80px);pointer-events:none}
+.rack-inner{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.rack ul{list-style:none;margin:26px 0 34px;display:grid;gap:14px}
+.rack li{display:flex;gap:14px;align-items:flex-start;font-size:15.5px;color:rgba(246,248,250,.85)}
+.rack li::before{content:"";flex:0 0 18px;height:2px;background:var(--gold);margin-top:11px}
+.spec{border:1px solid var(--line-light);border-radius:14px;padding:28px;background:rgba(255,255,255,.03)}
+.spec .row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line-light);font-size:14px}
+.spec .row:last-child{border:0}
+.spec .k{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(246,248,250,.6)}
+.spec .v{font-weight:600;color:var(--pulse)}
+@media(max-width:900px){.rack-inner{grid-template-columns:1fr}}
+
+/* why — split */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.why{border-radius:14px;padding:38px 34px}
+.why.inspur{background:var(--ink);color:#fff}
+.why.local{background:#fff;border:1px solid var(--line)}
+.why h3{font-family:var(--display);font-weight:800;font-size:24px;margin-bottom:8px}
+.why .tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;display:block}
+.why.inspur .tag{color:var(--pulse)}
+.why.local .tag{color:var(--gold)}
+.why p{font-size:15px;opacity:.85;margin-bottom:14px}
+.plus{display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:34px;color:var(--gold)}
+@media(min-width:901px){.why-grid{grid-template-columns:1fr 60px 1fr}}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr}.plus{padding:6px 0}}
+
+/* resources */
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.res{border:1px dashed rgba(27,91,215,.45);border-radius:14px;padding:30px;background:linear-gradient(180deg,#fff, #F0F4FA)}
+.res .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--wave)}
+.res h3{font-family:var(--display);font-weight:750;font-size:21px;margin:10px 0 8px}
+.res p{font-size:14.5px;color:rgba(11,31,58,.7);margin-bottom:18px}
+@media(max-width:900px){.res-grid{grid-template-columns:1fr}}
+
+/* consult CTA */
+.consult{background:linear-gradient(120deg,var(--ink),#123464);color:#fff;border-radius:18px;padding:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.consult::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border:1px solid rgba(201,154,60,.35);border-radius:50%}
+.consult h2{font-family:var(--display);font-weight:850;font-size:clamp(26px,3vw,38px);line-height:1.12;margin-bottom:12px}
+.consult p{color:rgba(246,248,250,.8);font-size:16px}
+.form{display:grid;gap:12px}
+.form input,.form select{font-family:var(--body);font-size:14.5px;padding:13px 16px;border-radius:8px;border:1px solid var(--line-light);background:rgba(255,255,255,.06);color:#fff}
+.form input::placeholder{color:rgba(246,248,250,.5)}
+.form select{color:rgba(246,248,250,.8)}
+@media(max-width:900px){.consult{grid-template-columns:1fr;padding:36px}}
+
+footer{background:var(--deep);color:rgba(246,248,250,.6);padding:44px 0;font-size:13.5px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot .mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="brand-mark">IN</div>
+      <div><b>Inspur MEA Partner</b><span>Mahmoud Omar · Africa &amp; Middle East</span></div>
+    </div>
+    <nav class="nav-links">
+      <a href="#industries">Solutions</a>
+      <a href="#ai">AI Infrastructure</a>
+      <a href="#why">Why Us</a>
+      <a href="#resources">Resources</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang"><a class="on" href="#">EN</a><a href="#">عربي</a><a href="#">FR</a></div>
+      <a class="btn btn-gold" href="#consult">Request a Consultation</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="badge"><i></i> Official Strategic Partner — Inspur</span>
+      <h1>The Regional <span class="gw">Gateway</span> to Inspur Technology</h1>
+      <p class="lede">Servers, storage, AI infrastructure, cloud and enterprise software — delivered and implemented locally across Africa and the Middle East, with direct access to one of the world's largest IT manufacturers.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#consult">Request a Consultation</a>
+        <a class="btn btn-ghost" href="#ai">Explore AI Infrastructure</a>
+      </div>
+      <div class="hero-name">
+        <div class="avatar">MO</div>
+        <div class="t"><b>Mahmoud Omar</b>Strategic Partner — Growth &amp; Enterprise Solutions, 15+ years across MENA &amp; Africa</div>
+      </div>
+    </div>
+
+    <!-- SIGNATURE: the gateway network -->
+    <div class="gateway" aria-hidden="true">
+      <svg viewBox="0 0 520 460">
+        <defs>
+          <linearGradient id="arcGrad" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#35C4E8" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#1B5BD7" stop-opacity=".25"/>
+          </linearGradient>
+        </defs>
+        <!-- arcs from origin (top-right = Inspur / East) to regional hubs -->
+        <path class="arc" id="a1" d="M470,40 C380,60 300,90 250,140"/>
+        <path class="arc" id="a2" d="M470,40 C360,80 300,150 300,205"/>
+        <path class="arc" id="a3" d="M470,40 C350,100 280,190 235,265"/>
+        <path class="arc" id="a4" d="M470,40 C340,120 220,220 140,320"/>
+        <path class="arc" id="a5" d="M470,40 C360,140 320,260 305,355"/>
+        <path class="arc" id="a6" d="M470,40 C330,110 160,170 85,205"/>
+        <path class="arc-pulse" d="M470,40 C380,60 300,90 250,140"/>
+        <path class="arc-pulse" style="animation-delay:-1.1s" d="M470,40 C350,100 280,190 235,265"/>
+        <path class="arc-pulse" style="animation-delay:-2.3s" d="M470,40 C340,120 220,220 140,320"/>
+        <path class="arc-pulse" style="animation-delay:-3.2s" d="M470,40 C360,140 320,260 305,355"/>
+        <!-- origin -->
+        <g class="hub origin">
+          <circle class="core" cx="470" cy="40" r="6" fill="#35C4E8"/>
+          <circle class="ring" cx="470" cy="40" r="6" stroke="#35C4E8" fill="none"/>
+          <text x="404" y="22">INSPUR HQ</text>
+        </g>
+        <!-- hubs -->
+        <g class="hub"><circle class="core" cx="250" cy="140" r="5"/><circle class="ring" cx="250" cy="140" r="5"/><text x="262" y="136">CAIRO</text></g>
+        <g class="hub"><circle class="core" cx="300" cy="205" r="5"/><circle class="ring" cx="300" cy="205" r="5"/><text x="312" y="201">RIYADH</text></g>
+        <g class="hub"><circle class="core" cx="235" cy="265" r="5"/><circle class="ring" cx="235" cy="265" r="5"/><text x="150" y="261">DUBAI</text></g>
+        <g class="hub"><circle class="core" cx="140" cy="320" r="5"/><circle class="ring" cx="140" cy="320" r="5"/><text x="152" y="316">LAGOS</text></g>
+        <g class="hub"><circle class="core" cx="305" cy="355" r="5"/><circle class="ring" cx="305" cy="355" r="5"/><text x="317" y="351">NAIROBI</text></g>
+        <g class="hub"><circle class="core" cx="85" cy="205" r="5"/><circle class="ring" cx="85" cy="205" r="5"/><text x="0" y="201">CASABLANCA</text></g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="wrap strip-inner">
+    <div class="stat"><b>15+</b><span>Countries served across MEA</span></div>
+    <div class="stat"><b>7</b><span>Product lines · full portfolio</span></div>
+    <div class="stat"><b>EN·AR·FR</b><span>Trilingual delivery</span></div>
+    <div class="stat"><b>1</b><span>Local partner. Direct line.</span></div>
+  </div>
+</div>
+
+<section id="industries">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Solutions by Industry <span class="ar">الحلول حسب القطاع</span></div>
+      <h2>Built for the sectors driving the region forward</h2>
+      <p>We don't sell boxes. We map Inspur's full portfolio to your sector's real workloads — then implement it on the ground.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="card rv"><span class="ic">GOV / 01</span><h3>Government &amp; Smart Cities</h3><p>Government services cloud, smart city platforms and secure national infrastructure — tender-ready, compliance-aware.</p><a class="go" href="#consult">Explore government solutions →</a></div>
+      <div class="card rv"><span class="ic">TEL / 02</span><h3>Telco &amp; Data Centers</h3><p>High-density servers, storage and networking for operators and colocation providers scaling for the AI era.</p><a class="go" href="#consult">Explore telco solutions →</a></div>
+      <div class="card rv"><span class="ic">FIN / 03</span><h3>Banking &amp; Finance</h3><p>Mission-critical compute and storage for core banking, with local implementation and support SLAs.</p><a class="go" href="#consult">Explore banking solutions →</a></div>
+      <div class="card rv"><span class="ic">IND / 04</span><h3>Manufacturing &amp; Energy</h3><p>Industrial Internet platforms, IIoT and intelligent ERP that connect the plant floor to the boardroom.</p><a class="go" href="#consult">Explore industrial solutions →</a></div>
+      <div class="card rv"><span class="ic">EDU / 05</span><h3>Education &amp; Research</h3><p>HPC clusters and research computing for universities and national labs building local AI capability.</p><a class="go" href="#consult">Explore research solutions →</a></div>
+      <div class="card rv"><span class="ic">ENT / 06</span><h3>Enterprise Cloud &amp; ERP</h3><p>GS Cloud, inSuite and HCM Cloud — intelligent ERP deployed with regional context, in your language.</p><a class="go" href="#consult">Explore enterprise software →</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="ai" class="rack dark">
+  <div class="wrap rack-inner">
+    <div class="rv">
+      <div class="eyebrow">Priority Line <span class="ar">البنية التحتية للذكاء الاصطناعي</span></div>
+      <h2 class="sec-h" style="font-family:var(--display);font-variation-settings:'wdth' 112;font-weight:800;font-size:clamp(28px,3.4vw,42px);line-height:1.1;margin:16px 0 6px">AI Infrastructure, without the waitlist</h2>
+      <ul>
+        <li>GPU servers and AI-optimized storage for training and inference workloads</li>
+        <li>Competitive allocation and pricing against tier-1 Western vendors</li>
+        <li>Local pre-sales, RFP support, delivery and implementation — one accountable partner</li>
+        <li>Data center design consultation for greenfield and expansion projects</li>
+      </ul>
+      <a class="btn btn-gold" href="#consult">Request Allocation &amp; Pricing</a>
+    </div>
+    <div class="spec rv">
+      <div class="row"><span class="k">Compute</span><span class="v">GPU / HPC Servers</span></div>
+      <div class="row"><span class="k">Storage</span><span class="v">All-Flash &amp; Distributed</span></div>
+      <div class="row"><span class="k">Network</span><span class="v">Intelligent / All-Optical</span></div>
+      <div class="row"><span class="k">Cloud OS</span><span class="v">Full-Stack Platform</span></div>
+      <div class="row"><span class="k">Delivery</span><span class="v">MEA-wide, implemented locally</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">The Partnership <span class="ar">لماذا نحن</span></div>
+      <h2>Global scale. Local execution.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why inspur rv">
+        <span class="tag">Inspur brings</span>
+        <h3>World-class manufacturing</h3>
+        <p>One of the world's largest server manufacturers, with a full stack from silicon to software: computing, storage, cloud, industrial internet, intelligent ERP.</p>
+        <p>Proven at national scale — powering governments, telcos and Fortune-level enterprises globally.</p>
+      </div>
+      <div class="plus rv">+</div>
+      <div class="why local rv">
+        <span class="tag">We bring</span>
+        <h3>Fifteen years on the ground</h3>
+        <p>Regional procurement fluency — tenders, RFPs, compliance and the realities of doing enterprise deals in Egypt, the GCC and Africa.</p>
+        <p>Arabic, English and French delivery. Implementation, not just fulfillment. And a direct line to a partner who answers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resources">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Resources <span class="ar">أدلة مجانية</span></div>
+      <h2>Start with the intelligence, not the invoice</h2>
+    </div>
+    <div class="res-grid">
+      <div class="res rv">
+        <span class="k">Free Guide · PDF</span>
+        <h3>MENA Data Center Buyer's Guide 2026</h3>
+        <p>Sizing, TCO benchmarks, vendor comparison and procurement pitfalls — written for regional CIOs and infrastructure heads.</p>
+        <a class="btn btn-wave" href="#consult">Download the guide</a>
+      </div>
+      <div class="res rv">
+        <span class="k">Free Assessment · Checklist</span>
+        <h3>AI Infrastructure Readiness Checklist</h3>
+        <p>A 20-point self-assessment: power, cooling, network, storage and skills — know exactly where you stand before you buy a single GPU.</p>
+        <a class="btn btn-wave" href="#consult">Get the checklist</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="consult">
+  <div class="wrap">
+    <div class="consult rv">
+      <div>
+        <h2>Talk to the region's direct line to Inspur</h2>
+        <p>Tell us what you're building. You'll get a response within one business day — with real answers on availability, pricing and implementation, not a sales script.</p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Full name" aria-label="Full name">
+        <input type="email" placeholder="Business email" aria-label="Business email">
+        <input type="text" placeholder="Company" aria-label="Company">
+        <select aria-label="Country"><option>Country</option><option>Egypt</option><option>Saudi Arabia</option><option>UAE</option><option>Morocco</option><option>Nigeria</option><option>Kenya</option><option>Other</option></select>
+        <select aria-label="What do you need"><option>What do you need?</option><option>AI Infrastructure / GPU servers</option><option>Servers &amp; Storage</option><option>Cloud &amp; ERP</option><option>Smart City / Industrial</option><option>Not sure yet — advise me</option></select>
+        <button class="btn btn-gold" type="button">Request a Consultation</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><b style="color:#fff">Inspur MEA Partner</b> · Mahmoud Omar — Strategic Partner, Africa &amp; Middle East</div>
+    <div class="mono">EN · العربية · FR &nbsp;|&nbsp; mahmoudomar.com</div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
