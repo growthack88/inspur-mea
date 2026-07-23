@@ -28,7 +28,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--body);color:var(--ink);background:var(--porcelain);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--body);color:var(--ink);background:var(--porcelain);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 ::selection{background:var(--wave);color:#fff}
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
@@ -64,6 +64,16 @@ header{position:sticky;top:0;z-index:50;background:rgba(8,21,39,.92);backdrop-fi
 .btn-ghost{border:1px solid var(--line-light);color:#fff}
 .btn-ghost:hover{border-color:var(--pulse);color:var(--pulse)}
 @media(max-width:900px){.nav-links{display:none}}
+@media(max-width:640px){
+  .wrap{padding:0 20px}
+  .nav{height:56px;gap:10px}
+  .brand{gap:9px;min-width:0}
+  .brand-mark{width:30px;height:30px;font-size:13px;flex:0 0 30px}
+  .brand b{font-size:14px;white-space:nowrap}
+  .brand span{display:none}
+  .lang{display:none}
+  .nav-right .btn{padding:8px 12px;font-size:12px;white-space:nowrap}
+}
 
 /* ---------- hero ---------- */
 .hero{background:radial-gradient(1200px 600px at 75% 20%,#12305c 0%,var(--deep) 60%);color:#fff;position:relative;overflow:hidden}
@@ -80,6 +90,17 @@ header{position:sticky;top:0;z-index:50;background:rgba(8,21,39,.92);backdrop-fi
 .chip:hover{border-color:var(--gold);color:#fff}
 .chip i{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block}
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding:64px 0 80px}}
+@media(max-width:640px){
+  .hero-inner{padding:52px 0 60px;gap:24px}
+  .hero h1{font-size:34px}
+  .hero p.lede{font-size:16px}
+  .hero .badge{font-size:10.5px;padding:7px 12px}
+  .hero-ctas .btn{width:100%;text-align:center}
+  .chip{font-size:11px;padding:7px 12px}
+  section{padding:64px 0}
+  .consult{padding:30px 22px}
+  .sec-head{margin-bottom:36px}
+}
 
 /* gateway map (signature) */
 .gateway{position:relative;height:460px}
