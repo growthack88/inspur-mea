@@ -78,7 +78,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(8,21,39,.92);backdrop-fi
 /* ---------- hero ---------- */
 .hero{background:radial-gradient(1200px 600px at 75% 20%,#12305c 0%,var(--deep) 60%);color:#fff;position:relative;overflow:hidden}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line-light) 1px,transparent 1px),linear-gradient(90deg,var(--line-light) 1px,transparent 1px);background-size:56px 56px;opacity:.25;mask-image:radial-gradient(800px 500px at 70% 40%,#000 30%,transparent 75%)}
-.hero-inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:96px 0 110px}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:96px;padding-bottom:110px}
 .hero h1{font-family:var(--display);font-variation-settings:'wdth' 118;font-weight:850;font-size:clamp(38px,4.6vw,60px);line-height:1.04;letter-spacing:-.01em}
 .hero h1 .gw{color:var(--gold)}
 .hero .badge{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line-light);border-radius:100px;padding:8px 16px;margin-bottom:26px;color:var(--pulse)}
@@ -89,9 +89,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(8,21,39,.92);backdrop-fi
 .chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:rgba(246,248,250,.85);border:1px solid var(--line-light);border-radius:100px;padding:8px 16px;background:rgba(255,255,255,.04);backdrop-filter:blur(4px);transition:border-color .25s,color .25s}
 .chip:hover{border-color:var(--gold);color:#fff}
 .chip i{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding:64px 0 80px}}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding-top:64px;padding-bottom:80px}}
 @media(max-width:640px){
-  .hero-inner{padding:52px 0 60px;gap:24px}
+  .hero-inner{padding-top:52px;padding-bottom:60px;gap:24px}
   .hero h1{font-size:34px}
   .hero p.lede{font-size:16px}
   .hero .badge{font-size:10.5px;padding:7px 12px}
