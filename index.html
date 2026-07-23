@@ -180,11 +180,12 @@ footer{background:var(--deep);color:rgba(246,248,250,.6);padding:44px 0;font-siz
 .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 .foot .mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em}
 
-/* reveal */
-.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
-.rv.in{opacity:1;transform:none}
+/* reveal (scoped to .js so content is never hidden without JavaScript) */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
