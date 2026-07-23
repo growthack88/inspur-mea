@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Inspur MEA Partner | Request a Consultation</title>
-<meta name="description" content="Request a consultation on Inspur servers, storage, AI infrastructure, cloud and ERP for Africa &amp; the Middle East. Real answers on availability, pricing and implementation within one business day.">
-<link rel="canonical" href="https://inspurmea.com/contact">
+<title>Resources — Inspur MEA Partner | Guides &amp; Assessments</title>
+<meta name="description" content="Free resources for MEA infrastructure buyers: the MENA Data Center Buyer's Guide 2026 and the AI Infrastructure Readiness Checklist.">
+<link rel="canonical" href="https://inspurmea.com/resources">
 <meta name="theme-color" content="#081527">
 <meta property="og:site_name" content="Inspur MEA Partner">
-<meta property="og:title" content="Contact — Inspur MEA Partner">
-<meta property="og:description" content="Talk to the region's direct line to Inspur. Response within one business day.">
+<meta property="og:title" content="Resources — Inspur MEA Partner">
+<meta property="og:description" content="Start with the intelligence, not the invoice: buyer's guide and AI readiness assessment for regional CIOs.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://inspurmea.com/contact">
+<meta property="og:url" content="https://inspurmea.com/resources">
 <meta property="og:image" content="https://inspurmea.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://inspurmea.com/og.png">
@@ -33,7 +33,7 @@
       <a href="/products">Products</a>
       <a href="/solutions">Solutions</a>
       <a href="/about">About</a>
-      <a href="/resources">Resources</a>
+      <a href="/resources" class="active">Resources</a>
     </nav>
     <div class="nav-right">
       <div class="lang"><a class="on" href="#">EN</a><a href="#">عربي</a><a href="#">FR</a></div>
@@ -44,30 +44,36 @@
 
 <div class="page-hero">
   <div class="wrap">
-    <span class="crumb"><a href="/">Home</a> / Contact</span>
-    <h1>Talk to the region's <span class="gw">direct line to Inspur</span></h1>
-    <p>Tell us what you're building. You'll get a response within one business day — with real answers on availability, pricing and implementation, not a sales script.</p>
+    <span class="crumb"><a href="/">Home</a> / Resources</span>
+    <h1>Start with the <span class="gw">intelligence</span>, not the invoice</h1>
+    <p>Free, no-registration resources written for regional CIOs, infrastructure heads and procurement teams. Use them before you talk to any vendor — including us.</p>
   </div>
 </div>
 
 <section>
-  <div class="wrap contact-grid">
-    <div class="contact-info rv">
-      <div class="row"><b>Email</b><a href="mailto:hi@inspurmea.com">hi@inspurmea.com</a></div>
-      <div class="row"><b>Response time</b><p>Within one business day, in English, Arabic or French.</p></div>
-      <div class="row"><b>What to include</b><p>Your sector, the workload you're planning (or the RFP you're answering), target sites and rough timeline. Half-formed is fine — scoping is what the first call is for.</p></div>
-      <div class="row"><b>Coverage</b><p>Africa &amp; the Middle East — coordinated from Cairo, Riyadh and Dubai.</p></div>
+  <div class="wrap">
+    <div class="res-grid">
+      <div class="res rv">
+        <span class="k">Free Guide · 10-minute read</span>
+        <h3>MENA Data Center Buyer's Guide 2026</h3>
+        <p>Sizing questions, TCO components, vendor comparison criteria and the procurement pitfalls specific to buying infrastructure in this region.</p>
+        <a class="btn btn-wave" href="/buyers-guide">Read the guide</a>
+      </div>
+      <div class="res rv">
+        <span class="k">Free Assessment · Interactive</span>
+        <h3>AI Infrastructure Readiness Checklist</h3>
+        <p>A 20-point self-assessment across power, cooling, network, storage and skills — score yourself and know exactly where you stand before you buy a single GPU.</p>
+        <a class="btn btn-wave" href="/checklist">Take the assessment</a>
+      </div>
     </div>
-    <form class="form-light rv" action="/api/lead" method="POST">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-      <input type="hidden" name="resource" id="resource-field" value="">
-      <input type="text" name="name" placeholder="Full name" aria-label="Full name" required>
-      <input type="email" name="email" placeholder="Business email" aria-label="Business email" required>
-      <input type="text" name="company" placeholder="Company" aria-label="Company">
-      <select name="country" aria-label="Country"><option value="">Country</option><option>Egypt</option><option>Saudi Arabia</option><option>UAE</option><option>Morocco</option><option>Nigeria</option><option>Kenya</option><option>Other</option></select>
-      <select name="need" aria-label="What do you need"><option value="">What do you need?</option><option>AI Infrastructure / GPU servers</option><option>Servers &amp; Storage</option><option>Cloud &amp; ERP</option><option>Smart City / Industrial</option><option>Not sure yet — advise me</option></select>
-      <button class="btn btn-gold" type="submit">Request a Consultation</button>
-    </form>
+  </div>
+</section>
+
+<section class="rack dark" style="padding:72px 0">
+  <div class="wrap" style="text-align:center;position:relative">
+    <h2 style="font-family:var(--display);font-weight:850;font-size:clamp(26px,3vw,38px);margin:0 0 12px">Want these applied to your actual project?</h2>
+    <p style="color:rgba(246,248,250,.78);max-width:520px;margin:0 auto 28px">Send us your sector and workload — we'll come back within one business day with a concrete configuration and pricing.</p>
+    <a class="btn btn-gold" href="/contact">Request a Consultation</a>
   </div>
 </section>
 

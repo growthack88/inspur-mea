@@ -30,9 +30,9 @@ ${rows.map(([k, v]) => `<tr><td style="border:1px solid #ddd"><b>${k}</b></td><t
     body: JSON.stringify({ from, to: [to], reply_to: email, subject, html }),
   });
 
-  // primary: branded domain; fallback covers the window before Resend verifies it
+  // primary: branded domain; fallback (verified mahmoudomar.com) covers the window before Resend verifies it
   let r = await send('Inspur MEA <hi@inspurmea.com>');
-  if (!r.ok) r = await send('Inspur MEA <onboarding@resend.dev>');
+  if (!r.ok) r = await send('Inspur MEA Partner <hi@mahmoudomar.com>');
   if (!r.ok) return res.status(502).send('Could not send your request right now — please email hi@inspurmea.com directly.');
 
   res.redirect(303, '/thanks');

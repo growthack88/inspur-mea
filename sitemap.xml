@@ -5,4 +5,7 @@
   <url><loc>https://inspurmea.com/solutions</loc><priority>0.9</priority></url>
   <url><loc>https://inspurmea.com/about</loc><priority>0.7</priority></url>
   <url><loc>https://inspurmea.com/contact</loc><priority>0.8</priority></url>
+  <url><loc>https://inspurmea.com/resources</loc><priority>0.7</priority></url>
+  <url><loc>https://inspurmea.com/buyers-guide</loc><priority>0.7</priority></url>
+  <url><loc>https://inspurmea.com/checklist</loc><priority>0.7</priority></url>
 </urlset>

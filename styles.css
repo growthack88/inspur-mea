@@ -248,3 +248,27 @@ footer{background:var(--deep);color:rgba(246,248,250,.6);padding:44px 0;font-siz
 .nav-links a.active::after{transform:scaleX(1)}
 .foot-links{display:flex;gap:18px;flex-wrap:wrap}
 .foot-links a:hover{color:var(--pulse)}
+
+/* ---------- resource articles ---------- */
+.article{max-width:780px}
+.article h2{font-family:var(--display);font-weight:800;font-size:28px;margin:44px 0 14px}
+.article h3{font-family:var(--display);font-weight:750;font-size:20px;margin:28px 0 10px}
+.article p{margin-bottom:14px;color:rgba(11,31,58,.8);font-size:15.5px}
+.article ul,.article ol{margin:0 0 16px 22px;color:rgba(11,31,58,.8);font-size:15.5px;display:grid;gap:8px}
+.article table{width:100%;border-collapse:collapse;margin:18px 0 24px;font-size:14.5px}
+.article th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--wave);border-bottom:2px solid var(--wave);padding:10px 12px}
+.article td{border-bottom:1px solid var(--line);padding:11px 12px;vertical-align:top}
+.article .callout{border-left:3px solid var(--gold);background:#fff;border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.article .callout b{color:var(--ink)}
+.tbl-scroll{overflow-x:auto}
+
+/* ---------- interactive checklist ---------- */
+.check-group{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 26px 16px;margin-bottom:18px}
+.check-group h3{font-family:var(--display);font-weight:800;font-size:19px;margin-bottom:6px}
+.check-group .d{font-size:13.5px;color:rgba(11,31,58,.65);margin-bottom:14px}
+.check{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--line);cursor:pointer;font-size:14.5px;color:rgba(11,31,58,.85)}
+.check input{margin-top:3px;width:17px;height:17px;accent-color:var(--wave);flex:0 0 17px}
+.scorebar{position:sticky;bottom:16px;background:var(--ink);color:#fff;border-radius:14px;padding:18px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px;box-shadow:0 14px 40px rgba(11,31,58,.35);flex-wrap:wrap}
+.scorebar b{font-family:var(--display);font-size:26px;color:var(--pulse)}
+.scorebar .verdict{font-size:14px;color:rgba(246,248,250,.85)}
+@media(max-width:640px){.scorebar{padding:14px 18px}}

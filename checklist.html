@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Infrastructure Readiness Checklist — Inspur MEA Partner</title>
+<meta name="description" content="Interactive 20-point AI infrastructure readiness self-assessment across power, cooling, network, storage and skills — know where you stand before you buy a single GPU.">
+<link rel="canonical" href="https://inspurmea.com/checklist">
+<meta name="theme-color" content="#081527">
+<meta property="og:site_name" content="Inspur MEA Partner">
+<meta property="og:title" content="AI Infrastructure Readiness Checklist">
+<meta property="og:description" content="Score your organization on 20 points across power, cooling, network, storage and skills.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://inspurmea.com/checklist">
+<meta property="og:image" content="https://inspurmea.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://inspurmea.com/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231B5BD7'/%3E%3Cstop offset='1' stop-color='%2335C4E8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-weight='800' font-size='26' fill='white' text-anchor='middle'%3EIN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wdth,wght@62..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <a href="/" style="display:flex;align-items:center;gap:12px"><div class="brand-mark">IN</div>
+      <div><b>Inspur MEA Partner</b><span>Official Partner · Africa &amp; Middle East</span></div></a>
+    </div>
+    <nav class="nav-links">
+      <a href="/products">Products</a>
+      <a href="/solutions">Solutions</a>
+      <a href="/about">About</a>
+      <a href="/resources" class="active">Resources</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang"><a class="on" href="#">EN</a><a href="#">عربي</a><a href="#">FR</a></div>
+      <a class="btn btn-gold" href="/contact">Request a Consultation</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <span class="crumb"><a href="/">Home</a> / <a href="/resources">Resources</a> / Readiness Checklist</span>
+    <h1>AI Infrastructure <span class="gw">Readiness Checklist</span></h1>
+    <p>Twenty points across five domains. Check what's true for your organization today — your score and reading update live. No registration, nothing leaves your browser.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap article">
+
+    <div class="check-group rv">
+      <h3>Power</h3>
+      <p class="d">AI racks draw multiples of legacy rack power. This is where most projects stall.</p>
+      <label class="check"><input type="checkbox"> We know our current available power capacity per rack, measured — not assumed</label>
+      <label class="check"><input type="checkbox"> The site can deliver 30&nbsp;kW+ per rack (or we have a committed upgrade path)</label>
+      <label class="check"><input type="checkbox"> Power redundancy (N+1 or better) covers the planned AI load, not just today's</label>
+      <label class="check"><input type="checkbox"> We have engaged the utility / facility owner about incremental supply and timelines</label>
+    </div>
+
+    <div class="check-group rv">
+      <h3>Cooling</h3>
+      <p class="d">High ambient temperatures across the region make this a first-order constraint, not a detail.</p>
+      <label class="check"><input type="checkbox"> Current cooling headroom is measured against the planned GPU load</label>
+      <label class="check"><input type="checkbox"> We have evaluated liquid cooling options for dense training clusters</label>
+      <label class="check"><input type="checkbox"> Hot/cold aisle containment (or equivalent airflow design) is in place or planned</label>
+      <label class="check"><input type="checkbox"> Cooling failure scenarios have defined automated responses</label>
+    </div>
+
+    <div class="check-group rv">
+      <h3>Network</h3>
+      <p class="d">Training clusters live or die on east-west bandwidth between GPUs.</p>
+      <label class="check"><input type="checkbox"> We know the interconnect bandwidth our workloads need (training vs inference differ sharply)</label>
+      <label class="check"><input type="checkbox"> The fabric design supports high-bandwidth GPU-to-GPU traffic without oversubscription hot spots</label>
+      <label class="check"><input type="checkbox"> Storage network throughput can feed the GPUs at training data rates</label>
+      <label class="check"><input type="checkbox"> External connectivity (data ingress, user access) is sized for the use case</label>
+    </div>
+
+    <div class="check-group rv">
+      <h3>Storage</h3>
+      <p class="d">Idle GPUs waiting on data are the most expensive idle asset you can own.</p>
+      <label class="check"><input type="checkbox"> Training data volumes are quantified, with growth projected</label>
+      <label class="check"><input type="checkbox"> We have a tiering plan: hot (training), warm (datasets), cold (archive)</label>
+      <label class="check"><input type="checkbox"> Storage throughput is benchmarked against GPU consumption rates for our workloads</label>
+      <label class="check"><input type="checkbox"> Data governance (residency, privacy, sovereignty) requirements are documented</label>
+    </div>
+
+    <div class="check-group rv">
+      <h3>Skills &amp; Operations</h3>
+      <p class="d">The hardware is the easy part. Running it well is the differentiator.</p>
+      <label class="check"><input type="checkbox"> Someone on the team has operated GPU infrastructure (or training is budgeted)</label>
+      <label class="check"><input type="checkbox"> Cluster scheduling / orchestration tooling is chosen, not "to be decided"</label>
+      <label class="check"><input type="checkbox"> Monitoring covers GPU utilization — so we'll know if we bought too much or too little</label>
+      <label class="check"><input type="checkbox"> There is a named owner for capacity planning and vendor management</label>
+    </div>
+
+    <div class="scorebar rv">
+      <div><b id="score">0</b><span style="font-family:var(--mono);font-size:13px;color:rgba(246,248,250,.6)"> / 20</span></div>
+      <div class="verdict" id="verdict">Check the points that are true for your organization today.</div>
+      <a class="btn btn-gold" href="/contact" style="white-space:nowrap">Discuss your gaps</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><b style="color:#fff">Inspur MEA Partner</b> · Official Strategic Partner — Africa &amp; Middle East</div>
+    <div class="foot-links mono">
+      <a href="/products">Products</a><a href="/solutions">Solutions</a><a href="/about">About</a><a href="/contact">Contact</a>
+      <a href="mailto:hi@inspurmea.com" style="color:#35C4E8">hi@inspurmea.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const boxes=[...document.querySelectorAll('.check input')];
+const scoreEl=document.getElementById('score'),verdictEl=document.getElementById('verdict');
+const verdicts=[[16,'Ready. Your foundations can absorb serious AI capacity — the conversation now is configuration and price.'],[11,'Nearly there. Close the unchecked gaps in parallel with procurement — none of them should surprise you post-delivery.'],[6,'Foundation first. Buy after the power, cooling and data answers exist — or buy smaller and grow with them.'],[0,'Start with an assessment, not a purchase. The unchecked boxes above are your real project plan.']];
+function update(){
+  const n=boxes.filter(b=>b.checked).length;
+  scoreEl.textContent=n;
+  verdictEl.textContent=n===0?'Check the points that are true for your organization today.':verdicts.find(v=>n>=v[0])[1];
+}
+boxes.forEach(b=>b.addEventListener('change',update));
+</script>
+</body>
+</html>
